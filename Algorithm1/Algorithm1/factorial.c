@@ -1,0 +1,36 @@
+#include <stdio.h>
+/*
+	°ö¼À ¾Ë°í¸®Áò -> ÆÑÅä¸®¾ó(Àç±Í)
+	ex) 1ºÎÅÍ 5±îÁö °öÇÏ±â 1x2x3x4x5 -> 5!
+*/
+
+int gobN(int n) {
+
+	int num = 1; //°öÇÑ °á°ú °ª
+	for (int i = 1; i <= n; i++) {
+		num *= i;
+	}
+	return num;
+}
+
+int factorial(int n) {
+	if (n <= 0)
+		return 1;
+	else
+		return n * factorial(n - 1);
+}
+
+int main()
+{
+	int value1;
+	value1 = gobN(5);
+	printf("°á°ú°ª:%d\n",value1);
+
+	int a, b, c;
+	a = factorial(1);
+	b = factorial(3);
+	c = factorial(5);
+
+	printf("1! = %d, 3! = %d, 5! = %d\n", a, b, c);
+	return 0;
+}
